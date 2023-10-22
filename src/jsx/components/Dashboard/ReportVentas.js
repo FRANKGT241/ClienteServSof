@@ -4,7 +4,7 @@ import MainPagetitle from '../../layouts/MainPagetitle';
 import { CSVLink } from 'react-csv';
 import axios from 'axios';
 
-const URI = 'http://localhost:3001/api/reports/getSalesInner'
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/reports/getSalesInner'
 
 const ReportVentas = () => {       
     const [reporte, setReporte] = useState([]); 

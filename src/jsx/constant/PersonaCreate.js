@@ -6,11 +6,12 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import InputMask from 'react-input-mask';
 
-const URI = 'http://localhost:3001/api/persona';
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/persona';
 
 const PersonaCreate = forwardRef((props, ref) => {
   const [IDRol, setidRol] = useState('');
   const [nombre, setNombres] = useState('');
+  const [cui, setCUI] = useState('');
   const [fechaNacimiento, setFechaNacimiento] = useState(new Date());
   const [direccion, setDireccion] = useState('');
   const [telefono, setTelefono] = useState('');
@@ -24,7 +25,7 @@ const PersonaCreate = forwardRef((props, ref) => {
   useEffect(() => {
     async function fetchRoles() {
       try {
-        const res = await axios.get('http://localhost:3001/api/rol');
+        const res = await axios.get('https://2z02nztm-3001.use2.devtunnels.ms/api/rol');
         setRoles(res.data);
       } catch (error) {
         console.error('Error al obtener la lista de roles:', error);
@@ -45,6 +46,7 @@ const PersonaCreate = forwardRef((props, ref) => {
 
     try {
       await axios.post(URI, {
+        CUI: cui,
         idRol: IDRol,
         Nombres: nombre,
         FechaNacimiento: fechaNacimiento,
@@ -92,6 +94,10 @@ const PersonaCreate = forwardRef((props, ref) => {
                   <input type="text" className="form-control" placeholder="" value={nombre} onChange={(e) => setNombres(e.target.value)} required />
                 </div>
                 <div className="col-xl-6 mb-3">
+                  <label htmlFor="nombre" className="form-label">CUI<span className="text-danger">*</span></label>
+                  <input type="text" className="form-control" placeholder="" value={cui} onChange={(e) => setCUI(e.target.value)} required />
+                </div>
+                <div className="col-xl-6 mb-3">
                   <label htmlFor="fecha" className="form-label">Fecha Nacimiento<span className="text-danger">*</span></label>
                   <input type="date" className="form-control" placeholder="" value={fechaNacimiento} onChange={(e) => setFechaNacimiento(e.target.value)} required/>
                 </div>
@@ -130,9 +136,10 @@ const PersonaCreate = forwardRef((props, ref) => {
                 <div className="col-xl-6 mb-3">
                   <label htmlFor="estado" className="form-label">Estado<span className="text-danger">*</span></label>
                   <select className="form-select" value={estado} onChange={(e) => setEstado(e.target.value)} required>
-                    <option value="1">Activo</option>
-                    <option value="0">Inactivo</option>
-                  </select>
+                  <option value="" disabled hidden></option>
+                  <option value="true">Activo</option>
+                  <option value="false">Inactivo</option>
+                </select>
                 </div>
               </div>
               <div>

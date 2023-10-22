@@ -5,7 +5,7 @@ import { CSVLink } from 'react-csv';
 import MainPagetitle from '../../../layouts/MainPagetitle';
 import MedicamentoCreate from '../../../constant/MedicamentoCreate';
 import axios from 'axios';
-const URI = 'http://localhost:3001/api/medicamento' //-----------------------
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/medicamento' //-----------------------
 
 const CompMedicamentoShow = () => {
   const [medicamentos, setMedicamentos] = useState([]); 

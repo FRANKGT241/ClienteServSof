@@ -5,7 +5,7 @@ import MainPagetitle from '../../../layouts/MainPagetitle';
 import PersonaCreate from '../../../constant/PersonaCreate'; // Cambiado
 import axios from 'axios';
 
-const URI = 'http://localhost:3001/api/persona'; // Cambiado
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/persona'; // Cambiado
 
 const PersonaShow = () => {
   const [personas, setPersonas] = useState([]); // Cambiado

@@ -2,7 +2,7 @@ import React, { useState, forwardRef, useImperativeHandle, useEffect } from 'rea
 import { Offcanvas } from 'react-bootstrap';
 import axios from 'axios';
 
-const URI = 'http://localhost:3001/api/Usrv';
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/Usrv';
 
 const UsuarioCreate = forwardRef((props, ref) => {
   const [usuario, setUsuario] = useState('');
@@ -17,7 +17,7 @@ const UsuarioCreate = forwardRef((props, ref) => {
     // Obtener la lista de personas disponibles al cargar el componente
     async function fetchPersonas() {
       try {
-        const res = await axios.get('http://localhost:3001/api/persona/active'); // Cambia la URL según tu API
+        const res = await axios.get('https://2z02nztm-3001.use2.devtunnels.ms/api/persona/active'); // Cambia la URL según tu API
         setPersonas(res.data);
       } catch (error) {
         console.error('Error al obtener la lista de personas:', error);

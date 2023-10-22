@@ -5,7 +5,7 @@ import MainPagetitle from '../../../layouts/MainPagetitle';
 import UsuarioCreate from '../../../constant/UsuarioCreate';
 import axios from 'axios';
 
-const URI = 'http://localhost:3001/api/Usrv';
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/Usrv';
 
 const UsuarioShow = () => {
 

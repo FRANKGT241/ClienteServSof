@@ -13,10 +13,10 @@ import lapredilecta from '../../images/background/lapredilecta.jpg';
 function Login (props) {
 	const [heartActive, setHeartActive] = useState(true);	
 	const navigate = useNavigate();
-    const [email, setEmail] = useState('user@s');
+    const [email, setEmail] = useState('User');
     let errorsObj = { email: '', password: '' };
     const [errors, setErrors] = useState(errorsObj);
-    const [password, setPassword] = useState('12345');
+    const [password, setPassword] = useState('pass1');
     const dispatch = useDispatch();
 
     function onLogin(e) {

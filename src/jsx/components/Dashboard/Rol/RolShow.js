@@ -5,7 +5,7 @@ import { CSVLink } from 'react-csv';
 import MainPagetitle from '../../../layouts/MainPagetitle';
 import RolCreate from '../../../constant/RolCreate';
 import axios from 'axios';
-const URI = 'http://localhost:3001/api/rol'
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/rol'
 const CompRolShow = () => {
   const [roles, setRoles] = useState([]); 
   useEffect(() => {

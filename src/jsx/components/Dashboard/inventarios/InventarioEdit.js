@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const URI = 'http://localhost:3001/api/inventario';
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/inventario';
 
 const CompInventarioEdit = () => {
   const [cantidadDis, setCantidadDisponible] = useState('');
@@ -30,7 +30,7 @@ const CompInventarioEdit = () => {
     // Obtener la lista de medicamentos disponibles al cargar el componente
     async function fetchMedicamentos() {
       try {
-        const res = await axios.get('http://localhost:3001/api/medicamento'); // Cambia la URL según tu API
+        const res = await axios.get('https://2z02nztm-3001.use2.devtunnels.ms/api/medicamento'); // Cambia la URL según tu API
         setMedicamentos(res.data);
       } catch (error) {
         console.error('Error al obtener la lista de medicamentos:', error);

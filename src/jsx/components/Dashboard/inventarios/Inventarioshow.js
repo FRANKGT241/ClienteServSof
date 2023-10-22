@@ -5,7 +5,7 @@ import MainPagetitle from '../../../layouts/MainPagetitle';
 import InventarioCreate from '../../../constant/InventarioCreate'; // Cambiado
 import axios from 'axios';
 
-const URI = 'http://localhost:3001/api/inventario'; // Cambiado
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/inventario'; // Cambiado
 
 const CompInventarioShow = () => {
   const [inventario, setInventario] = useState([]);
@@ -27,7 +27,7 @@ const CompInventarioShow = () => {
     const res = await axios.get(URI);
     // Combina información del medicamento con los datos de inventario
     const inventarioData = res.data.map(async (item) => {
-      const medicamentoRes = await axios.get(`http://localhost:3001/api/medicamento/${item.idMedicamento}`);
+      const medicamentoRes = await axios.get(`https://2z02nztm-3001.use2.devtunnels.ms/api/medicamento/${item.idMedicamento}`);
       return {
         ...item,
         medicamento: medicamentoRes.data,

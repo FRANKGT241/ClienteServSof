@@ -5,7 +5,7 @@ import MainPagetitle from '../../../layouts/MainPagetitle';
 import LoteCreate from '../../../constant/LoteCreate'; // Cambiado
 import axios from 'axios';
 
-const URI = 'http://localhost:3001/api/lote'; // Cambiado
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/lote'; // Cambiado
 
 const CompLoteShow = () => {
   const [lotes, setLotes] = useState([]); // Cambiado

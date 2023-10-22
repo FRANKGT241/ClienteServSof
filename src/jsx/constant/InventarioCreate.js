@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Offcanvas } from 'react-bootstrap';
 import axios from 'axios';
 
-const URI = 'http://localhost:3001/api/inventario';
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/inventario';
 
 const InventarioCreate = forwardRef((props, ref) => {
   const [cantidadDis, setCantidadDisponible] = useState('');
@@ -19,7 +19,7 @@ const InventarioCreate = forwardRef((props, ref) => {
     // Obtener la lista de medicamentos disponibles al cargar el componente
     async function fetchMedicamentos() {
       try {
-        const res = await axios.get('http://localhost:3001/api/medicamento/active'); // Cambia la URL según tu API
+        const res = await axios.get('https://2z02nztm-3001.use2.devtunnels.ms/api/medicamento/active'); // Cambia la URL según tu API
         setMedicamentos(res.data);
       } catch (error) {
         console.error('Error al obtener la lista de medicamentos:', error);

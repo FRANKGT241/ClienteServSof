@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const URI = 'http://localhost:3001/api/medicamento'; // Cambiamos la URL a la de medicamentos
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/medicamento'; // Cambiamos la URL a la de medicamentos
 
 const CompEditarMedicamento = () => {
   const [nombre, setNombre] = useState('');

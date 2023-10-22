@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 
-const URI = 'http://localhost:3001/api/lote';
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/lote';
 
 const LoteEdit = () => {
   const [preciosComp, setPrecioCompra] = useState('');
@@ -43,7 +43,7 @@ const LoteEdit = () => {
 
     async function fetchMedicamentos() {
       try {
-        const res = await axios.get('http://localhost:3001/api/medicamento');
+        const res = await axios.get('https://2z02nztm-3001.use2.devtunnels.ms/api/medicamento');
         setMedicamentos(res.data);
       } catch (error) {
         console.error('Error al obtener la lista de medicamentos:', error);
@@ -52,7 +52,7 @@ const LoteEdit = () => {
 
     async function fetchProveedores() {
       try {
-        const res = await axios.get('http://localhost:3001/api/proveedores');
+        const res = await axios.get('https://2z02nztm-3001.use2.devtunnels.ms/api/proveedores');
         setProveedores(res.data);
       } catch (error) {
         console.error('Error al obtener la lista de proveedores:', error);

@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import VentaCreate from '../../../constant/VentaCreate';
 
-const URI = 'http://localhost:3001/api/venta';
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/venta';
 
 const CompVentaEdit = () => {
   const [fecha, setFecha] = useState('');
@@ -35,7 +35,7 @@ const CompVentaEdit = () => {
 
   const fetchClientes = async () => {
     try {
-      const res = await axios.get('http://localhost:3001/api/cliente');
+      const res = await axios.get('https://2z02nztm-3001.use2.devtunnels.ms/api/cliente');
       setClientes(res.data);
     } catch (error) {
       console.error('Error al obtener la lista de clientes:', error);
@@ -44,7 +44,7 @@ const CompVentaEdit = () => {
 
   const fetchPersonas = async () => {
     try {
-      const res = await axios.get('http://localhost:3001/api/persona');
+      const res = await axios.get('https://2z02nztm-3001.use2.devtunnels.ms/api/persona');
       setPersonas(res.data);
     } catch (error) {
       console.error('Error al obtener la lista de personas:', error);

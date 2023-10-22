@@ -41,7 +41,7 @@ function LogoutPage(props) {
     const requestData = { localId: tokenData.localId };
     //console.log(tokenData.localId);
     return axios.post(
-        `http://127.0.0.1:3001/api/Usrv/logout`,
+        `https://2z02nztm-3001.use2.devtunnels.ms/api/Usrv/logout`,
         requestData,
     );
 }

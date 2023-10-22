@@ -65,7 +65,7 @@ export function loginAction(email, password, navigate) {
                 );
                dispatch(loginConfirmedAction(response.data));
                console.log(dispatch(loginConfirmedAction(response.data)))	
-                axios.put(`http://localhost:3001/api/lote/updateLotsExpired `);              
+                axios.put(`https://2z02nztm-3001.use2.devtunnels.ms/api/lote/updateLotsExpired `);              
 				navigate('/bienvenida');    
                 window.location.reload();            
             })

@@ -5,7 +5,7 @@ import MainPagetitle from '../../../layouts/MainPagetitle';
 import VentaCreate from '../../../constant/VentaCreate'; // Cambiado
 import axios from 'axios';
 
-const URI = 'http://localhost:3001/api/venta'; // Cambiado
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/venta'; // Cambiado
 
 const VentaShow = () => {
   const [ventas, setVentas] = useState([]);
@@ -37,7 +37,7 @@ const VentaShow = () => {
 
   const fetchClientes = async () => {
     try {
-      const res = await axios.get('http://localhost:3001/api/clientes');
+      const res = await axios.get('https://2z02nztm-3001.use2.devtunnels.ms/api/clientes');
       setClientes(res.data);
     } catch (error) {
       console.error('Error al obtener la lista de clientes:', error);
@@ -46,7 +46,7 @@ const VentaShow = () => {
 
   const fetchPersonas = async () => {
     try {
-      const res = await axios.get('http://localhost:3001/api/persona');
+      const res = await axios.get('https://2z02nztm-3001.use2.devtunnels.ms/api/persona');
       setPersonas(res.data);
     } catch (error) {
       console.error('Error al obtener la lista de personas:', error);
@@ -118,7 +118,7 @@ const VentaShow = () => {
      };
     console.log(requestData);
     const response = await axios.post(
-        `http://localhost:3001/api/venta`,
+        `https://2z02nztm-3001.use2.devtunnels.ms/api/venta`,
         requestData,
     );
     const idVenta = response.data.idRegistroMov;

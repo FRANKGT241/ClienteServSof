@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Offcanvas } from 'react-bootstrap';
 import axios from 'axios';
 
-const URI = 'http://localhost:3001/api/lote';
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/lote';
 
 const LoteCreate = forwardRef((props, ref) => {
   const [preciosComp, setPrecioCompra] = useState('');
@@ -23,7 +23,7 @@ const LoteCreate = forwardRef((props, ref) => {
   useEffect(() => {
     async function fetchMedicamentos() {
       try {
-        const res = await axios.get('http://localhost:3001/api/medicamento/active');
+        const res = await axios.get('https://2z02nztm-3001.use2.devtunnels.ms/api/medicamento/active');
         setMedicamentos(res.data);
       } catch (error) {
         console.error('Error al obtener la lista de medicamentos:', error);
@@ -32,7 +32,7 @@ const LoteCreate = forwardRef((props, ref) => {
 
     async function fetchProveedores() {
       try {
-        const res = await axios.get('http://localhost:3001/api/proveedores/active');
+        const res = await axios.get('https://2z02nztm-3001.use2.devtunnels.ms/api/proveedores/active');
         setProveedores(res.data);
       } catch (error) {
         console.error('Error al obtener la lista de proveedores:', error);

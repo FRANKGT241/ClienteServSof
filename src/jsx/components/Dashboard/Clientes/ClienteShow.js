@@ -5,7 +5,7 @@ import { CSVLink } from 'react-csv';
 import MainPagetitle from '../../../layouts/MainPagetitle';
 import ClienteCreate from '../../../constant/ClienteCreate';
 import axios from 'axios';
-const URI = 'http://localhost:3001/api/cliente'
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/cliente'
 const CompClienteShow = () => {
   const [clientes, setClientes] = useState([]); 
   useEffect(() => {

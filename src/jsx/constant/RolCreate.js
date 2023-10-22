@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Offcanvas } from 'react-bootstrap';
 import axios from 'axios';
 
-const URI = 'http://localhost:3001/api/rol'
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/rol'
 
 const RolCreate = forwardRef((props, ref) => {
   const [rol, setRol] = useState('')

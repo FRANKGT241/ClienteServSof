@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 
-const URI = 'http://localhost:3001/api/persona';
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/persona';
 
 const PersonaEdit = () => {
   const [IDRol, setidRol] = useState('');
@@ -42,7 +42,7 @@ const PersonaEdit = () => {
 
     async function obtenerRoles() {
       try {
-        const res = await axios.get('http://localhost:3001/api/rol');
+        const res = await axios.get('https://2z02nztm-3001.use2.devtunnels.ms/api/rol');
         setRoles(res.data);
       } catch (error) {
         console.error('Error al obtener la lista de roles:', error);

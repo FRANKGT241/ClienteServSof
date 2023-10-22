@@ -11,7 +11,7 @@ const Usuario = () => {
 
   useEffect(() => {
     // Realizar una solicitud al servidor Express para obtener los datos
-    axios.get('http://localhost:3001/api/Back/obtener-datos') 
+    axios.get('https://2z02nztm-3001.use2.devtunnels.ms/api/Back/obtener-datos') 
       .then((response) => {
         setDatos(response.data); 
       })

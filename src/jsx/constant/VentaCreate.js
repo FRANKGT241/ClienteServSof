@@ -2,7 +2,7 @@ import React, { useState, forwardRef, useImperativeHandle, useEffect } from 'rea
 import { Offcanvas } from 'react-bootstrap';
 import axios from 'axios';
 
-const URI = 'http://localhost:3001/api/venta';
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/venta';
 
 const VentaCreate = forwardRef((props, ref) => {
   const [fecha, setFecha] = useState('');
@@ -16,7 +16,7 @@ const VentaCreate = forwardRef((props, ref) => {
   useEffect(() => {
     async function fetchClientes() {
       try {
-        const res = await axios.get('http://localhost:3001/api/cliente');
+        const res = await axios.get('https://2z02nztm-3001.use2.devtunnels.ms/api/cliente');
         setClientes(res.data);
       } catch (error) {
         console.error('Error al obtener la lista de clientes:', error);

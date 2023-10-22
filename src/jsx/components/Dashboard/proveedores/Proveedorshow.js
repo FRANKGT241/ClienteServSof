@@ -5,7 +5,7 @@ import { CSVLink } from 'react-csv';
 import MainPagetitle from '../../../layouts/MainPagetitle';
 import ProveedorCreate from '../../../constant/ProveedorCreate';
 import axios from 'axios';
-const URI = 'http://localhost:3001/api/proveedores' //prueba 2 
+const URI = 'https://2z02nztm-3001.use2.devtunnels.ms/api/proveedores' //prueba 2 
 const CompProveedorShow = () => {
   const [proveedores, setProveedores] = useState([]); 
   useEffect(() => {
@@ -122,7 +122,7 @@ const CompProveedorShow = () => {
                             </td>
                               <div>
                                 <Link to={`/edit-proveedor/${proveedores.IDProveedor}`} className='btn btn-info'>Editar</Link>
-                                <button onClick={() => deleteProveedor(proveedores.IDProveedor)} className='btn btn-danger'>Eliminar</button>
+                               
                               </div>
                             </tr>
                         ))}
